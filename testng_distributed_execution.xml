@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5">
+
+
+
+	<test name="Testrunner1" parallel="classes" thread-count="2">
+		<classes>
+			<class name="com.vtiger.purchaseorder.CreatePOwithItemQtyListPriceTest">
+				<methods>
+					<include name="createPOwithItemQtyListPriceTest" />
+				</methods>
+			</class>
+			<class name="com.vtiger.purchaseorder.CreatePOwithItemWOqtyTest">
+				<methods>
+					<include name="createPOwithItemWOqtyTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test name="Testrunner2" parallel="classes" thread-count="2">
+		<classes>
+			<class name="com.vtiger.purchaseorder.CreatePOwithMandatoryExceptItemTest">
+				<methods>
+					<include name="createPOwithMandatoryExceptItemTest" />
+				</methods>
+			</class>
+			<class name="com.vtiger.purchaseorder.CreatePOwithItemWOlistPriceTest">
+				<methods>
+					<include name="createPOwithItemWOlistPriceTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
